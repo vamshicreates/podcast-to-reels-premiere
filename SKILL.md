@@ -52,7 +52,7 @@ Write a clip plan using [the plan format](references/plan-format.md). Captions u
 
 ## Phase 5 — Build and finish in Premiere Pro
 
-1. Use `premiere-editing-dna/scripts/build_premiere_sequence.py build <timeline_spec.json>` to compile each editable XML timeline and SRT. Import the XML and SRT into Premiere Pro. If the live bridge is available, its `--open` path may assist; verify the resulting sequence in Premiere rather than assuming the bridge succeeded.
+1. Use this skill's `scripts/compile_premiere.py --spec <timeline_spec.json> --builder <path-to-premiere-editing-dna/scripts/build_premiere_sequence.py>` to compile each editable XML timeline and SRT. Import the XML and SRT into Premiere Pro. The wrapper avoids a CLI parsing bug in some versions of the Premiere dependency. If a working live bridge is available, it may assist; verify the resulting sequence in Premiere rather than assuming the bridge succeeded.
 2. Finish the edit in Premiere Pro: vertical 9:16 framing unless the user specifies another target, deliberate cuts, clean dialogue, readable captions within safe areas, color consistency, and only justified B-roll, graphics, music, or SFX. Do not apply a default zoom, ducking level, or visual style merely because the source skill has one. Use approved edits as style reference when supplied.
 3. Save the editable Premiere project alongside the reel's XML and SRT. Export the reel from Premiere Pro. If Premiere is unavailable, stop at the validated editable XML/SRT and report that in-app finish/export is pending; do not present an FFmpeg render as a Premiere export.
 

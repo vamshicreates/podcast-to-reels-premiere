@@ -39,7 +39,7 @@ Save a JSON object with a `reels` array. Every reel ID must occur in `approvals.
 {"approved_reel_ids": ["episode-01-reel-03"]}
 ```
 
-Run:
+Run with Python 3 (`python3` on macOS; `py -3` or `python` on Windows PowerShell):
 
 ```bash
 python3 scripts/prepare_premiere.py \
@@ -48,4 +48,4 @@ python3 scripts/prepare_premiere.py \
   --output-dir /path/to/reels-work/premiere-specs
 ```
 
-Then compile each emitted spec with the installed Premiere skill's `build_premiere_sequence.py build <spec-path>`. Import the generated XML and SRT into Premiere Pro. The XML is an editable interchange sequence; it becomes a `.prproj` only when saved from Premiere Pro.
+Then compile each emitted spec with this skill's `scripts/compile_premiere.py --spec <spec-path> --builder <installed-premiere-editing-dna>/scripts/build_premiere_sequence.py`. Import the generated XML and SRT into Premiere Pro. The XML is an editable interchange sequence; it becomes a `.prproj` only when saved from Premiere Pro.
