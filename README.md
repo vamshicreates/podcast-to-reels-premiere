@@ -32,3 +32,11 @@ On macOS, use `python3`; install FFmpeg and the same two dependent skills. The X
 ## Status
 
 The plan-to-XML/SRT path has been tested with sample media on macOS. Windows uses the same Python scripts and the Premiere dependency's documented Windows path, but has not been tested end-to-end on a Windows machine. The live Premiere Pro editing/export stage requires Premiere Pro on the machine running the skill.
+
+
+## How to use
+
+1. Install this skill and its `video-use` and `premiere-editing-dna` dependencies, then confirm Python, FFmpeg, and Premiere Pro are available.
+2. Provide the folder containing a full podcast episode and ask the agent to use Podcast to Reels to find short clip ideas.
+3. Review the ranked ideas and source timecodes. Approve the specific reel ideas you want edited.
+4. Let the skill prepare the approved timelines and captions. Open the resulting Premiere Pro project, inspect cuts and captions, and export the final reels.
